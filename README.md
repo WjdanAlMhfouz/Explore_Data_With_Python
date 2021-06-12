@@ -1,3 +1,3 @@
 # explore_data_with_python
 
-### Data used in this project
+The dataset that was utilized in this project can be viewed here.
