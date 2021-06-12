@@ -6,5 +6,3 @@ In this project, I used Python to examine data on bike-sharing systems in three 
 
 - Python 3, NumPy, and pandas installed using Anaconda
 - PyCharm IDEs
-
-#### DATASET ARE AVAILABLE AT THE MASTER BRUNCH
