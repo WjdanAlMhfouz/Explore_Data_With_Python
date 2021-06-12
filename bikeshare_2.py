@@ -1,6 +1,6 @@
 import time
+
 import pandas as pd
-import numpy as np
 
 CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
@@ -169,6 +169,26 @@ def user_stats(df):
     print('-' * 40)
 
 
+def display_data(df):
+    while True:
+        count = 0
+        print_data = input('\nDo you want to see the first 5 row of data ? Enter yes or no.\n ').lower()
+
+        while print_data == 'yes':
+            count = count + 5
+            print(df[count:count + 5])
+            while True:
+                print('\nDo you want to see more data?\n')
+                print_data = input()
+                if print_data == 'yes':
+                    count = count + 5
+                    print(df[count: count + 5])
+                elif print_data != "yes":
+                    break
+        else:
+            break
+
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -178,6 +198,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+        display_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
@@ -186,4 +207,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
